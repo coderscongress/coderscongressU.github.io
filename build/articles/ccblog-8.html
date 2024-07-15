@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  <link href='https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css' rel='stylesheet'/>
+    <script src='https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <div><script>
+    cookieChoices = {};
+  </script></div>
+  <div>
+    <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2261188801041213"></script>
+  </div>
+   
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const copyButton = document.getElementById('copyButton');
+    const codeSnippet = document.getElementById('codeSnippet');
+
+    copyButton.addEventListener('click', function() {
+        codeSnippet.select();
+        document.execCommand('copy');
+        alert('Code snippet copied to clipboard!');
+    });
+});</script>
+  
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const copyButton2 = document.getElementById('copyButton2');
+    const codeSnippet2 = document.getElementById('codeSnippet2');
+
+    copyButton2.addEventListener('click', function() {
+        codeSnippet2.select();
+        document.execCommand('copy');
+        alert('Code snippet2 copied to clipboard!');
+    });
+});</script>
+  
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const copyButton3 = document.getElementById('copyButton3');
+    const codeSnippet3 = document.getElementById('codeSnippet3');
+
+    copyButton3.addEventListener('click', function() {
+        codeSnippet3.select();
+        document.execCommand('copy');
+        alert('Code snippet3 copied to clipboard!');
+    });
+});</script>
+   
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const copyButton4 = document.getElementById('copyButton4');
+    const codeSnippet4 = document.getElementById('codeSnippet4');
+
+    copyButton4.addEventListener('click', function() {
+        codeSnippet4.select();
+        document.execCommand('copy');
+        alert('Code snippet4 copied to clipboard!');
+    });
+});</script>
+  
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const copyButton5 = document.getElementById('copyButton5');
+    const codeSnippet5 = document.getElementById('codeSnippet5');
+
+    copyButton5.addEventListener('click', function() {
+        codeSnippet5.select();
+        document.execCommand('copy');
+        alert('Code snippet5 copied to clipboard!');
+    });
+});</script>
+  
+ <title>Applying SOLID Principles In Software Engineering Using JavaScript</title> 
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main>
+        <div class="container">
+            <section>
+                
+                <article>
+				
+				<div class="headline">
+        <img src="./ai-generated-images/cc40.jpg" width="200" height="160" alt="Headline Image">
+        <p>
+           <h1> Applying SOLID Principles In <br>
+		   Software Engineering Using JavaScript</h1>
+        </p>
+    </div>
+                    
+					<h3>Applying SOLID Principles In Software Engineering Using JavaScript</h3><p>SOLID is a set of five principles in object-oriented design that, when followed, can lead to more maintainable, scalable, and flexible software. These principles provide a guide for structuring code and designing classes to enhance code quality and prevent common issues. In this article, we'll delve into each SOLID principle and showcase their application in JavaScript with relevant code snippets.</p><p><br /></p><p><br /></p><h4 style="text-align: left;">Introduction to SOLID Principles</h4><p>SOLID is an acronym that stands for:</p><p>S - Single Responsibility Principle (SRP)</p><p>O - Open/Closed Principle (OCP)</p><p>L - Liskov Substitution Principle (LSP)</p><p>I - Interface Segregation Principle (ISP)</p><p>D - Dependency Inversion Principle (DIP)</p><p>These principles, when combined, provide guidelines for designing software that is modular, maintainable, and robust.</p><p><br /></p><h4 style="text-align: left;">&nbsp;Single Responsibility Principle (SRP)</h4><p>The SRP states that a class should have only one reason to change. In other words, a class should have only one responsibility.</p>
+ 
+        <h1>JS Code Snippets</h1>
+  
+  
+  <div class="code-container">
+    <pre><code class="language-javascript">
+  class User {
+
+  constructor(name, email) {
+
+    this.name = name;
+
+    this.email = email;
+
+  }
+
+
+
+  getName() {
+
+    return this.name;
+
+  }
+
+
+
+  getEmail() {
+
+    return this.email;
+
+  }
+
+}
+
+
+
+class UserManager {
+
+  constructor() {
+
+    this.users = [];
+
+  }
+
+
+
+  addUser(user) {
+
+    this.users.push(user);
+
+  }
+
+
+
+  getUserByName(name) {
+
+    return this.users.find(user => user.getName() === name);
+
+  }
+
+
+
+  getUserByEmail(email) {
+
+    return this.users.find(user => user.getEmail() === email);
+
+  }
+
+}
+
+</code></pre>
+    
+    <button id="copyButton" class="copy-button">Copy</button>
+</div>
+  
+<br />
+        
+    
+
+<h4 style="text-align: left;">&nbsp;Open/Closed Principle (OCP)</h4><p>The OCP states that software entities (classes, modules, functions) should be open for extension but closed for modification.</p>
+
+        <h1>JS Code Snippets</h1>
+       <div class="code-container">
+    <pre><code class="language-javascript"> 
+class Shape {
+
+  area() {
+
+    throw new Error('Not implemented');
+
+  }
+
+}
+
+
+
+class Circle extends Shape {
+
+  constructor(radius) {
+
+    super();
+
+    this.radius = radius;
+
+  }
+
+
+
+  area() {
+
+    return Math.PI * this.radius * this.radius;
+
+  }
+
+}
+
+
+
+class Square extends Shape {
+
+  constructor(side) {
+
+    super();
+
+    this.side = side;
+
+  }
+
+
+
+  area() {
+
+    return this.side * this.side;
+
+  }
+
+}
+
+</code></pre>
+    
+    <button class="copy-button">Copy</button>
+    </div>
+
+<p><br /></p><h4 style="text-align: left;">&nbsp;Liskov Substitution Principle (LSP)</h4><p>The LSP states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.</p>
+
+        <h1>JS Code Snippets</h1>
+        <div class="code-container">
+    <pre><code class="language-javascript"> 
+class Bird {
+
+  fly() {
+
+    // Common fly behavior
+
+  }
+
+}
+
+
+
+class Sparrow extends Bird {
+
+  fly() {
+
+    // Specific fly behavior of a sparrow
+
+  }
+
+}
+
+
+
+class Ostrich extends Bird {
+
+  fly() {
+
+    throw new Error('Ostrich cannot fly');
+
+  }
+
+}
+
+</code></pre>
+    
+    <button class="copy-button">Copy</button>
+    </div>
+
+<p><br /></p><p><br /></p><h4 style="text-align: left;">Interface Segregation Principle (ISP)</h4><p>The ISP states that a class should not be forced to implement interfaces it does not use. Clients should not be forced to depend on methods they do not use.</p><p><br /></p>
+
+<div class="container">
+        <h1>JS Code Snippets</h1>
+        <div class="code-container">
+    <pre><code class="language-javascript"> 
+class Worker {
+
+  work() {
+
+    // Common work behavior
+
+  }
+
+}
+
+
+
+class Manager {
+
+  manage() {
+
+    // Common management behavior
+
+  }
+
+}
+
+
+
+class Programmer extends Worker {
+
+  code() {
+
+    // Code implementation
+
+  }
+
+}
+
+
+
+class ProjectManager extends Manager {
+
+  plan() {
+
+    // Planning implementation
+
+  }
+
+}
+
+
+
+</code></pre>
+    
+    <button class="copy-button">Copy</button>
+
+    </div>
+
+<p><br /></p><h4 style="text-align: left;">Dependency Inversion Principle (DIP)</h4><p>The DIP states that high-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.</p>
+
+<div class="container">
+        <h1>JS Code Snippets</h1>
+        <div class="code-container">
+    <pre><code class="language-javascript"> 
+
+class Logger {
+
+  log(message) {
+
+    // Logging logic
+
+  }
+
+}
+
+
+
+class User {
+
+  constructor(name, logger) {
+
+    this.name = name;
+
+    this.logger = logger;
+
+  }
+
+
+
+  greet() {
+
+    this.logger.log(`Hello, ${this.name}!`);
+
+  }
+
+}
+
+
+
+</code></pre>
+    
+    <button class="copy-button">Copy</button>
+    </div>
+<p><br /></p><h4 style="text-align: left;">&nbsp;Applying SOLID in JavaScript</h4><p>In JavaScript applications, SOLID principles can greatly improve code quality and maintainability. By adhering to these principles, developers can create more modular and extensible code, leading to easier debugging and future enhancements.</p><p><br /></p><h3 style="text-align: left;">&nbsp;Conclusion</h3><p>The SOLID principles provide a solid foundation for designing clean, maintainable, and flexible software. When applied to JavaScript applications, they contribute to the creation of code that is easier to understand, extend, and maintain. By keeping these principles in mind, developers can elevate the quality of their code and contribute to the development of robust and scalable applications.</p><div><br /></div><p></p><h4 style="text-align: left;"></h4>
+
+
+<div></div><br />
+<a href="" style="display: block; padding: 1em 0px; text-align: left;">Follow us</a> 
+<div><a href="https://web.facebook.com/groups/454454213366754/" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" border="0" data-original-height="24" data-original-width="24" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAgOS2XyhyNtx2fDpwHySXY9RMcP5gFs8SpDc3e1VFqLdGn5g1qmUaZtvQynQpmtVv14CTWbL-0c_AfNGDImGY094PcgFbfHiIqW7nevFIcza1OFNsM8AI0RiANyPnupunj8VAUXmpD8YusDw2rm6EcLKtzYAe3LSxV4rXoEvmq2WaLu2m-JLEmuy-ow/s1600/facebook.jpg" /></a></div><p></p></div></div>
+                </article>
+            </section>
+
+    </main>
+
+
+
+<br />
+
+<script>
+const copyButtons = document.querySelectorAll('.copy-button');
+
+copyButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const codeBlock = button.parentElement.querySelector('pre');
+        const codeText = codeBlock.textContent;
+        const textArea = document.createElement('textarea');
+        textArea.value = codeText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+    });
+});
+</script>
+
+</body>
+</html>

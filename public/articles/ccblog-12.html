@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  <link href='https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css' rel='stylesheet'/>
+    <script src='https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <div><script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const copyButton = document.getElementById('copyButton');
+        const codeSnippet = document.getElementById('codeSnippet');
+
+        copyButton.addEventListener('click', function() {
+            codeSnippet.select();
+            document.execCommand('copy');
+            alert('Code snippet copied to clipboard!');
+        });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const copyButton2 = document.getElementById('copyButton2');
+        const codeSnippet2 = document.getElementById('codeSnippet2');
+
+        copyButton2.addEventListener('click', function() {
+            codeSnippet2.select();
+            document.execCommand('copy');
+            alert('Code snippet2 copied to clipboard!');
+        });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const copyButton3 = document.getElementById('copyButton3');
+        const codeSnippet3 = document.getElementById('codeSnippet3');
+
+        copyButton3.addEventListener('click', function() {
+            codeSnippet3.select();
+            document.execCommand('copy');
+            alert('Code snippet3 copied to clipboard!');
+        });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const copyButton4 = document.getElementById('copyButton4');
+        const codeSnippet4 = document.getElementById('codeSnippet4');
+
+        copyButton4.addEventListener('click', function() {
+            codeSnippet4.select();
+            document.execCommand('copy');
+            alert('Code snippet4 copied to clipboard!');
+        });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const copyButton5 = document.getElementById('copyButton5');
+        const codeSnippet5 = document.getElementById('codeSnippet5');
+
+        copyButton5.addEventListener('click', function() {
+            codeSnippet5.select();
+            document.execCommand('copy');
+            alert('Code snippet5 copied to clipboard!');
+        });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const copyButton6 = document.getElementById('copyButton6');
+        const codeSnippet6 = document.getElementById('codeSnippet6');
+
+        copyButton6.addEventListener('click', function() {
+            codeSnippet6.select();
+            document.execCommand('copy');
+            alert('Code snippet6 copied to clipboard!');
+        });
+    });
+  </script>
+  
+ <title>Integrating ChatGPT into a JavaScript Chatbot Application using OpenAI API</title> 
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main>
+        <div class="container">
+            <section>
+                
+                <article>
+				
+				<div class="headline">
+        <img src="./ai-generated-images/cc18.jpg" width="200" height="160" alt="Headline Image">
+        <p>
+           <h1> Integrating ChatGPT into <br>
+		   a JavaScript Chatbot Application<br>
+		   using OpenAI API</h1>
+        </p>
+    </div>
+                    
+   <h3>Integrating ChatGPT into a JavaScript Chatbot Application using OpenAI API</h3><p>
+  In the world of modern web development, chatbots have become an integral part
+  of enhancing user engagement and providing personalized experiences.
+  Integrating powerful language models like ChatGPT into your chatbot
+  application can greatly enhance its capabilities. In this tutorial, we will
+  guide you through the process of creating a Node.js-based chatbot application
+  that utilizes the OpenAI API to generate responses using ChatGPT. To get
+  started, you'll need your own OpenAI API key, which you can obtain by signing
+  up on the OpenAI website.
+</p>
+<h4 style="text-align: left;">Prerequisites</h4>
+<p>Before we begin, ensure you have the following:</p>
+<p>Node.js installed on your machine.</p>
+<p>
+  A text editor such as <b>notepad++</b> or an integrated development
+  environment (IDE) for coding.
+</p>
+<p>
+  Availability of a Bash shell or PowerShell terminal for executing commands
+  from the command line interface.
+</p>
+<p><b>Setting Up the Project</b></p>
+<p>Follow these steps to set up your chatbot application:</p>
+<p>Create a New Project Folder:</p>
+<p>
+  Open your terminal and navigate to the directory where you want to create your
+  project. Run the following commands at your terminal:
+</p>
+mkdir ChatbotApp<br />cd ChatbotApp
+<div>
+  <br />
+  <div>
+    Initialize Node.js Project:<br />Initialize a Node.js project by running the
+    following command and following the prompts:<br />npm init
+  </div>
+  <div><br /></div>
+  <div>
+    Install Required Packages:<br />Install the necessary packages for your
+    chatbot application using the following commands:<br />npm install openai
+    chatgpt dotenv readline-sync
+    <p>
+      1. openai: The OpenAI API wrapper to interact with the OpenAI GPT models.
+    </p>
+    <p>2. chatgpt: A utility library for integrating ChatGPT models.</p>
+    <p>3. dotenv: To securely manage environment variables.</p>
+    <p>
+      4. readline-sync: For reading user input from the terminal synchronously.
+    </p>
+    Create a .env File:<br />Create a .env file in the project directory to
+    store your OpenAI API key securely:<br />OPENAI_API_KEY=your_api_key_here
+  </div>
+  <div>Replace your_api_key_here with your actual OpenAI API key.</div>
+  <div>
+    <br />Building the Chatbot Application<br />Let's proceed with writing the
+    code for our chatbot application.<br />Import Required Modules:<br />Create
+    a file named chatbot.js in your project directory and add the following code
+    at the beginning of the file:
+  </div>
+  <div>
+    <br />
+
+    
+      <h1>JS Code Snippet</h1>
+     <div class="code-container">
+    <pre><code class="language-javascript">
+ 
+require('dotenv').config();
+const openai = require('openai');
+const chatgpt = require('chatgpt');
+const readlineSync = require('readline-sync');
+</code></pre>
+    
+    <button class="copy-button">Copy</button>
+      <br />
+    </div>
+
+    <p>Initialize OpenAI API:</p>
+    <p>
+      Add the following code to initialize the OpenAI API with your API key:
+    </p>
+    <p>openai.apiKey = process.env.OPENAI_API_KEY;</p>
+    Define ChatGPT Configuration:<br />Set up the ChatGPT configuration to
+    specify the model and other parameters:<br />
+
+    
+      <h1>JS Code Snippet</h1>
+      <div class="code-container">
+    <pre><code class="language-javascript">
+ 
+const chatGPTConfig = {
+  language: 'en',
+  temperature: 0.7,
+  maxTokens: 100,
+  model: 'gpt-3.5-turbo', // Specify the desired model
+};
+</code></pre>
+    
+    <button class="copy-button">Copy</button>
+      <br />
+    </div>
+
+    <p><br /></p>
+    <p>Create Chatbot Interaction Loop:</p>
+    <p>
+      Implement a loop to interact with the user and generate chatbot responses:
+    </p>
+    <p><br /></p>
+
+    
+      <h1>JS Code Snippet</h1>
+      <div class="code-container">
+    <pre><code class="language-javascript">
+ 
+async function chatLoop() {
+  console.log('ChatGPT Chatbot');
+  while (true) {
+    const userMessage = readlineSync.question('You: ');
+
+    if (userMessage.toLowerCase() === 'exit') {
+      console.log('Chatbot: Goodbye!');
+      break;
+    }
+
+    const chatResponse = await chatgpt.getChatResponse(
+      userMessage,
+      chatGPTConfig
+    );
+
+    console.log('Chatbot:', chatResponse.message.content);
+  }
+}
+
+chatLoop();
+</code></pre>
+    
+    <button class="copy-button">Copy</button>
+      <br />
+    </div>
+
+    <p>Now let's get our html code setup.</p>
+    <p>HTML (index.html):</p>
+    <p><br /></p>
+
+    
+      <h1>HTML (index.html)</h1>
+      <div class="code-container">
+      <pre><code class="language-html">
+ 
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+  &lt;title&gt;Chatbot Console&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="console"&gt;
+    &lt;div class="output"&gt;&lt;/div&gt;
+    &lt;div class="input-line"&gt;
+      &lt;span class="prompt"&gt;You:&lt;/span&gt;
+      &lt;input type="text" id="user-input" autofocus&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;script src="chatbot.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/code&gt;&lt;/pre&gt;
+    
+    &lt;button class="copy-button"&gt;Copy&lt;/button&gt;
+      &lt;br /&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+    &lt;p&gt;CSS (styles.css):&lt;/p&gt;
+    &lt;div class="container"&gt;
+      &lt;h1&gt;CSS (styles.css):&lt;/h1&gt;
+      &lt;div class="code-container"&gt;
+    &lt;pre&gt;&lt;code class="language-css"&gt;
+ 
+
+  body {
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #272727;
+}
+
+.console {
+  border: 2px solid #00ff00;
+  width: 400px;
+  background-color: black;
+  padding: 10px;
+  color: #00ff00;
+}
+
+.output {
+  min-height: 200px;
+  padding: 5px;
+  background-color: black;
+  border: 1px solid #00ff00;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  color: #00ff00;
+  margin-right: 5px;
+}
+
+#user-input {
+  background-color: black;
+  color: #00ff00;
+  border: none;
+  outline: none;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  width: 100%;
+}
+
+</code></pre>
+    
+    <button class="copy-button">Copy</button>
+      <br />
+    </div>
+
+    <p><br /></p>
+    <p>JavaScript (chatbot.js):<br /></p>
+    <div class="container">
+      <h1>JS Code Snippet</h1>
+      <div class="code-container">
+    <pre><code class="language-javascript">
+ 
+document.addEventListener('DOMContentLoaded', function() {
+  require('dotenv').config();
+  const openai = require('openai');
+  const chatgpt = require('chatgpt');
+  const readlineSync = require('readline-sync');
+
+  openai.apiKey = process.env.OPENAI_API_KEY;
+
+  const chatGPTConfig = {
+    language: 'en',
+    temperature: 0.7,
+    maxTokens: 100,
+    model: 'gpt-3.5-turbo', // Specify the desired model
+  };
+
+  const outputDiv = document.querySelector('.output');
+  const userInput = document.getElementById('user-input');
+  const prompt = document.querySelector('.prompt');
+
+  function displayUserMessage(message) {
+    const userMessage = `<div class="user-message"><span class="prompt">You:</span> ${message}</div>`;
+    outputDiv.innerHTML += userMessage;
+    outputDiv.scrollTop = outputDiv.scrollHeight;
+  }
+
+  function displayChatbotResponse(response) {
+    const chatbotResponse = `<div class="chatbot-response"><span class="prompt">Chatbot:</span> ${response}</div>`;
+    outputDiv.innerHTML += chatbotResponse;
+    outputDiv.scrollTop = outputDiv.scrollHeight;
+  }
+
+  async function chatLoop() {
+    console.log('ChatGPT Chatbot');
+    while (true) {
+      const userMessage = userInput.value;
+
+      displayUserMessage(userMessage);
+
+      if (userMessage.toLowerCase() === 'exit') {
+        displayChatbotResponse('Goodbye!');
+        break;
+      }
+
+      const chatResponse = await chatgpt.getChatResponse(
+        userMessage,
+        chatGPTConfig
+      );
+
+      displayChatbotResponse(chatResponse.message.content);
+      userInput.value = ''; // Clear the input field
+    }
+  }
+
+  chatLoop();
+});
+
+</code></pre>
+    
+    <button class="copy-button">Copy</button>
+      <br />
+    </div>
+    <p><br /></p>
+    <p>Explanation of Code:</p>
+    <p>
+      We import the required modules: dotenv for environment variables, openai
+      for OpenAI API interaction, chatgpt for using ChatGPT models, and
+      readline-sync for synchronous user input reading.
+    </p>
+    <p>
+      We initialize the OpenAI API using the API key stored in the .env file.
+    </p>
+    <p>
+      The chatGPTConfig object defines the configuration for generating
+      responses. You can adjust the temperature and maxTokens values to control
+      the creativity and length of responses.
+    </p>
+    <p>
+      The chatLoop function handles the interaction between the user and the
+      chatbot. It prompts the user for input and generates a chatbot response
+      using the chatgpt.getChatResponse function. The loop continues until the
+      user types "exit."
+    </p>
+    <p>
+      The model parameter of the chatGPTConfig object specifies the desired
+      model. In this case, we're using the 'gpt-3.5-turbo' model, which is a
+      powerful and efficient variant of GPT-3.5.
+    </p>
+    <p>
+      By specifying the model in the configuration, you can easily switch
+      between different models provided by OpenAI to suit your application's
+      requirements. Just make sure to use the appropriate model name in the
+      model parameter.
+    </p>
+    We're using the DOMContentLoaded event to ensure the JavaScript code runs
+    after the page has finished loading.<br />The displayUserMessage function
+    takes a user message as an argument and adds it to the output area with the
+    appropriate styling.<br />The displayChatbotResponse function takes a
+    chatbot response as an argument and adds it to the output area with the
+    appropriate styling.<br />Inside the chatLoop function, after receiving the
+    user input and before generating the chatbot response, we call the
+    displayUserMessage function to display the user's input in the console.<br />After
+    generating the chatbot response, we call the displayChatbotResponse function
+    to display the chatbot's response in the console.<br /><br />When you run
+    the HTML file in a web browser and interact with the chatbot, the user's
+    input and the chatbot's responses will be displayed in the console-like
+    interface. The output area will automatically scroll as new messages are
+    added.<br /><br />
+    <p>
+      This complete example includes the HTML structure, CSS styles, and the
+      combined JavaScript code. When you run the index.html file in a web
+      browser, you'll see the interactive chatbot console where you can input
+      commands and see chatbot responses in a simulated command-line interface.
+      Remember to adjust the paths as necessary based on your file structure.
+    </p>
+    <p>Running the app from the command prompt:</p>
+    <p>
+      Let's demonstrate how the app chatbot.js may be run from PowerShell's CLI.
+    </p>
+    <p>Open PowerShell:</p>
+    <p>
+      Press the Windows key, type "PowerShell," and then select "Windows
+      PowerShell" from the search results.
+    </p>
+    <p>Navigate to the Project Directory:</p>
+    <p>
+      Use the cd command to navigate to the directory where your chatbot.js
+      script is located. For example, if your script is located in the
+      ChatbotApp folder on your desktop:
+    </p>
+    <p>powershell</p>
+    <p>cd C:\Users\YourUsername\Desktop\ChatbotApp</p>
+    <p>Replace YourUsername with your actual Windows username.</p>
+    <p>Run the Chatbot Script:</p>
+    <p>
+      Once you're in the correct directory, you can run the script using the
+      node command followed by the script's filename:
+    </p>
+    <p>powershell:</p>
+    <p>node chatbot.js</p>
+    <p>Start Chatting!!!:</p>
+    <p>
+      The script will start, and you'll see the message "ChatGPT Chatbot." You
+      can start typing your messages as if you're chatting with the chatbot.
+    </p>
+    <p>Exit the Chatbot:</p>
+    <p>
+      To exit the chatbot, simply type "exit" (without quotes) and press Enter.
+      The chatbot will respond with "Goodbye!" and the script will terminate.
+    </p>
+    <p>
+      Here's how the PowerShell CLI session might look while running the
+      chatbot.js script:
+    </p>
+    <p><br /></p>
+    <p>powershell</p>
+    <p>PS C:\Users\YourUsername\Desktop\ChatbotApp&gt; node chatbot.js</p>
+    <p>ChatGPT Chatbot</p>
+    <p><br /></p>
+    <p>
+      Remember to replace YourUsername with your actual Windows username and
+      adjust the paths according to your project's location.
+    </p>
+    <p><br /></p>
+    <p>
+      Suppose the application was running in the background we could simulate
+      the display of a chat message and a response in the console as in the
+      following static example. Keep in mind that this static example won't
+      actually interact with the running application, but it will give the
+      appearance of a chat and a response being displayed.
+    </p>
+    <p>
+      Remember that this example is purely static and doesn't interact with any
+      backend or running application. It's a visual representation for
+      demonstration purposes only.
+    </p>
+    <br />
+
+    <div class="htmlbody">
+      <div class="console">
+        <div class="output">
+          <div class="user-message"><span class="prompt">You:</span> Hello</div>
+
+          <div class="chatbot-response">
+            <span class="prompt">Chatbot:</span> Hi there! How can I assist you
+            today?
+          </div>
+
+          <div class="user-message">
+            <span class="prompt">You:</span> What's the weather like today?
+          </div>
+
+          <div class="chatbot-response">
+            <span class="prompt">Chatbot:</span>I'm not connected to real-time
+            data, but I can help answer questions or have a conversation!
+          </div>
+
+          <div class="user-message">
+            <span class="prompt">You:</span>Hey! Tell me a quick joke...
+          </div>
+
+          <div class="chatbot-response">
+            <span class="prompt">Chatbot:</span>Why don't scientists trust
+            atoms? Because they make up everything!
+          </div>
+           
+          <div class="user-message">
+            <span class="prompt">You:</span>Haha that's really funny!
+          </div>
+          
+          <div class="chatbot-response">
+            <span class="prompt">Chatbot:</span>I'm glad you enjoyed it! If you ever want to hear another joke or need assistance with anything else, feel free to ask. Laughter is a great way to brighten the day!
+          </div>
+          
+          <div class="user-message">
+            <span class="prompt">You:</span>That's definitely true indeed. Lovely to hear.
+          </div>
+          
+          <div class="chatbot-response">
+            <span class="prompt">Chatbot:</span>I'm glad you agree! Laughter can be a wonderful way to bring positivity and joy into our lives. If you ever have more questions, need assistance, or just want to chat, feel free to reach out. Have a fantastic day!
+          </div>
+         
+          <div class="user-message">
+            <span class="prompt">You:</span>Bye!
+          </div>
+
+          <div class="chatbot-response">
+            <span class="prompt">Chatbot:</span> Goodbye! If you ever return with more questions or just want to chat, I'll be here. Have a wonderful day!
+          </div>
+
+          <div class="input-line">
+            <span class="prompt">You:</span>
+
+            <input autofocus="" id="user-input" type="text" value="Hello" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p></p>
+    <p><br /></p>
+    <h4 style="text-align: left;">Conclusion</h4>
+    <p>
+      Congratulations! You've successfully built a Node.js-based chatbot
+      application that integrates ChatGPT using the OpenAI API. This application
+      allows you to engage in conversations with the chatbot and receive
+      responses generated by the powerful ChatGPT model. Feel free to customize
+      and enhance the application further to suit your specific use case and
+      requirements.&nbsp;
+    </p>
+      <p></p>
+    <h4 style="text-align: left;"></h4>
+
+
+<div></div><br />
+<a href="" style="display: block; padding: 1em 0px; text-align: left;">Follow us</a> 
+<div><a href="https://web.facebook.com/groups/454454213366754/" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" border="0" data-original-height="24" data-original-width="24" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAgOS2XyhyNtx2fDpwHySXY9RMcP5gFs8SpDc3e1VFqLdGn5g1qmUaZtvQynQpmtVv14CTWbL-0c_AfNGDImGY094PcgFbfHiIqW7nevFIcza1OFNsM8AI0RiANyPnupunj8VAUXmpD8YusDw2rm6EcLKtzYAe3LSxV4rXoEvmq2WaLu2m-JLEmuy-ow/s1600/facebook.jpg" /></a></div><p></p></div>
+                </article>
+            </section>
+
+            
+        </div>
+    </main>
+
+
+
+<br />
+
+<script>
+const copyButtons = document.querySelectorAll('.copy-button');
+
+copyButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const codeBlock = button.parentElement.querySelector('pre');
+        const codeText = codeBlock.textContent;
+        const textArea = document.createElement('textarea');
+        textArea.value = codeText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+    });
+});
+</script>
+
+</body>
+</html>
