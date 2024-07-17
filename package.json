@@ -67,7 +67,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://coderscongress.github.io/coders-congress",
+  "homepage": "https://coderscongress.github.io",
   "devDependencies": {
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-styled-components": "^2.1.4",
